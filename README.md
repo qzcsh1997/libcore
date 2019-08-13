@@ -27,7 +27,7 @@ Download
 	}
   
 dependencies {
-	        implementation 'com.github.1458883958:libcore:1.0.0'
+	        implementation 'com.github.1458883958:libcore:1.0.1-rl'
 }
 ```
 
