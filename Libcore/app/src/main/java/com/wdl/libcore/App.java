@@ -1,24 +1,30 @@
 package com.wdl.libcore;
 
-import android.app.Application;
-import android.content.Context;
-
+import com.wdl.libcore.util.WActivityStack;
 import com.wdl.libcore.util.WLogger;
 
-public class App extends Application
+public class App extends WApp
 {
-    public static Context mContext;
+    public static App mContext;
+
+    public static App get()
+    {
+        return mContext;
+    }
 
     @Override
     public void onCreate()
     {
         super.onCreate();
-        mContext = this.getApplicationContext();
-        WLogger.setIsDebug(true);
+        mContext = this;
     }
 
-    public static Context get()
+    @Override
+    protected void runOnMainProcess()
     {
-        return mContext;
+        WLogger.setIsDebug(true);
+        WActivityStack.getInstance().setDebug(true);
     }
+
+
 }
