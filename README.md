@@ -27,7 +27,7 @@ Download
 	}
   
 dependencies {
-	        implementation 'com.github.1458883958:libcore:1.0.1-rl'
+	        implementation 'com.github.Wudelin:libcore:1.0.1-rl'
 }
 ```
 
